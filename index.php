@@ -1,9 +1,8 @@
 <?php
-session_start(); 
+    session_start(); 
 	require_once("config.php");
     conectar('localhost', 'root', '', 'amaszonas');
 
-    $fbid = $_SESSION['FBID'];
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +11,7 @@ session_start();
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Mamá | Red PAT y Amaszonas</title>
 
-<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
 
@@ -31,36 +30,9 @@ session_start();
 		</div>
 	</div>
 
-<?php $query = @mysql_query('SELECT * FROM  registros WHERE fbid="'.mysql_real_escape_string($fbid).'"'); ?>
-
-<?php if ($existe = @mysql_fetch_object($query)) :?>
-    <?php
-        //header ("Location: http://localhost/amaszonas/registro/");
-
-    $consulta="SELECT * FROM registros WHERE fbid LIKE $fbid";
-    $resultado = mysql_query($consulta) or die(mysql_error());
-
-
-
-    echo '<div class="msf-container">
-            <div class="container">
-            <div class="row">
-            <div class="col-md-offset-3 col-md-6">
-            <img class="wow slideInRight" data-wow-duration="1s" src="../assets/img/camion.png" alt="">
-            <div class="resultados wow lightspeedIn" data-wow-delay="2s"';
-    while ( $columna= mysql_fetch_array($resultado)) { 
-
-            echo '<p><strong>Registro: </strong>' .$columna['nombre'].'</p>';
-            echo '<p><strong>Departamento: </strong>' .$columna['ciudad']. '</p>'; 
-            echo '</div></div></div></div></div>';
-
-
-    }
-    ?>
-
-<?php else :?>
-    <?php if ($_SESSION['FBID']): ?>      <!--  After user login  -->
+<?php if ($_SESSION['FBID']): ?>    <!--  After user login  -->
     <!--Formulario-->
+    <div class="container-fluid">
     <div class="row">
     	<div class="container">
                 <div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -115,7 +87,7 @@ session_start();
                             </div>
                             <!-- Telefono -->
                             <div class="form-group">
-                            <div class="inputGroupContainer">
+                                <div class="inputGroupContainer">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                                     <input  name="telefono" placeholder="Numero telefónico o móvil" class="form-control"  type="text">
@@ -139,6 +111,24 @@ session_start();
                                     <input  name="direccion" placeholder="Dirección" class="form-control"  type="text">
                                     </div>
                             	</div>
+                            </div>
+                            <!-- esposo -->
+                            <div class="form-group">
+                                <div class="inputGroupContainer">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-male"></i></span>
+                                    <input  name="marido" placeholder="Nombre del esposo" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nombre del hijo -->
+                            <div class="form-group">
+                                <div class="inputGroupContainer">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-child"></i></span>
+                                    <input  name="hijo" placeholder="Coloque nombre completo de su hijo" class="form-control"  type="text">
+                                    </div>
+                                </div>
                             </div>
     			             <!-- Destino Favorito de Amaszonas-->
                             <div class="form-group"> 
@@ -190,10 +180,17 @@ session_start();
                                 </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <label class="checkbox-inline"><input type="checkbox" name="acepto" value="">Acepta las bases del concurso?</label>
+                                </div>
+                            </div>
                             <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Gracias por registrarte</div>
 
                             <!--id -->
-                            <input type="text" name="fbid" hidden value="<?php echo $_SESSION['FBID']?>">                    
+                            <input type="text" name="fbid" hidden value="<?php echo $_SESSION['FBID']?>">
+
+
                             <!-- Enviar --> 
                             <div class="form-group">
                                 <label for="enviar" class="control-label"></label>
@@ -204,6 +201,7 @@ session_start();
                 </div>
     	</div>
     </div>
+</div>
 
     <?php else: ?>
 
@@ -213,8 +211,8 @@ session_start();
             <a href="fbconfig.php" class="button facebook"><span><i class="fa fa-facebook"></i></span><p>Facebook</p></a>
     	</div>
     </div>
-    <?php endif ?>
 <?php endif ?>
+<!--?php endif ?-->
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>

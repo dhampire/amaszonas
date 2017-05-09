@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-05-2017 a las 23:56:46
+-- Tiempo de generación: 09-05-2017 a las 22:02:20
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -36,14 +36,12 @@ CREATE TABLE IF NOT EXISTS `registros` (
   `telefono` varchar(20) COLLATE utf8_bin DEFAULT NULL,
   `ciudad` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `direccion` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `marido` varchar(200) COLLATE utf8_bin NOT NULL,
+  `hijo` varchar(200) COLLATE utf8_bin NOT NULL,
   `amaszonas` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `pat` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `registros`
---
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +61,7 @@ ALTER TABLE `registros`
 -- AUTO_INCREMENT de la tabla `registros`
 --
 ALTER TABLE `registros`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=0;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -15,7 +15,7 @@ use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
 
 
-// init app with app id and secret
+// Iniciar seccion con FaceBook SDK id and secret key de FAcebook Developer
 FacebookSession::setDefaultApplication( '1907334616191071','0aff68cf57b41b41153504d7928e85ff' );
 // login helper with redirect_uri
     $helper = new FacebookRedirectLoginHelper('http://localhost/amaszonas/fbconfig.php' );
