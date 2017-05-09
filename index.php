@@ -113,23 +113,42 @@
                             	</div>
                             </div>
                             <!-- esposo -->
-                            <div class="form-group">
+
+                            <div class="form-group"> 
+                                <div class="selectContainer">
+                                <label class="control-label">Número de integrantes de su familia directa</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-child"></i></span>
+                                    <select name="integrantes" class="form-control selectpicker" >
+                                             <option value="" selected></option>
+                                             <option value="2 Integrante">2 Integrante</option>
+                                             <option value="3 Integrantes">3 Integrantes</option> 
+                                             <option value="4 Integrantes">4 Integrantes</option> 
+                                             <option value="5 Integrantes">5 Integrantes</option> 
+                                             <option value="6 Integrantes">6 Integrantes</option> 
+                                             <option value="7 o más Integranes">7 o más Integranes</option>
+                                               
+                                    </select>
+                                </div>
+                                </div>
+                            </div>
+                            <!--div class="form-group">
                                 <div class="inputGroupContainer">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-male"></i></span>
                                     <input  name="marido" placeholder="Nombre del esposo" class="form-control"  type="text">
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                             <!-- Nombre del hijo -->
-                            <div class="form-group">
+                            <!--div class="form-group">
                                 <div class="inputGroupContainer">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-child"></i></span>
                                     <input  name="hijo" placeholder="Coloque nombre completo de su hijo" class="form-control"  type="text">
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
     			             <!-- Destino Favorito de Amaszonas-->
                             <div class="form-group"> 
                                 <div class="selectContainer">

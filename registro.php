@@ -14,8 +14,8 @@ $mail = strip_tags($_POST['mail']);
 $telefono = strip_tags($_POST['telefono']);
 $ciudad = strip_tags($_POST['ciudad']);
 $direccion = strip_tags($_POST['direccion']);
-$marido = strip_tags($_POST['marido']);
-$hijo = strip_tags($_POST['hijo']);
+$marido = strip_tags($_POST['integrantes']);
+
 $amaszonas = strip_tags($_POST['amaszonas']);
 $pat = strip_tags($_POST['pat']);
 

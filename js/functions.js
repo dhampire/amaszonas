@@ -61,27 +61,12 @@ $(document).ready(function() {
                     },
                 }
             },
-            marido: {
-                validators: {
-                     stringLength: {
-                        min: 5,
-                        message: 'De no toner esposo, coloque "No tengo" '
-                    },
+            integrantes: {
+                validators:{
                     notEmpty: {
-                        message: 'De no toner esposo, coloque "No tengo" '
-                    },
-                }
-            },
-            hijo: {
-                validators: {
-                stringLength: {
-                        min: 5,
-                        message: 'Por favor ingrese su ciudad en la que radíca'
-                    },
-                        notEmpty: {
-                        message: 'Por favor ingrese su ciudad en la que radíca'
+                        message: 'Seleccione la cantidad de familiares directos'
                     }
-                }              
+                }
             },
             ciudad: {
                 validators: {
